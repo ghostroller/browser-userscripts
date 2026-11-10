@@ -24,6 +24,24 @@ https://raw.githubusercontent.com/ghostroller/browser-userscripts/main/scripts/<
 
 将 `<脚本名>` 替换为已提交的实际文件名。不要使用 GitHub 的 `blob/` 网页地址作为下载地址。
 
+## 本地开发与验证
+
+在 Windows 上安装 [sctl](https://docs.scriptcat.org/docs/use/sctl/) 并启动本地服务。首次连接时，在 PowerShell 运行以下命令，将一次性配对码填入 ScriptCat 的「工具 → 外部接入 → 接入 sctl」。
+
+```powershell
+$scriptCatCli = Join-Path $env:LOCALAPPDATA 'sctl\bin\sctl.exe'
+& $scriptCatCli connect
+& $scriptCatCli status
+& $scriptCatCli get
+```
+
+1. 在仓库修改脚本，并用 `node --check` 检查语法。
+2. 测试订阅成员时，把工作副本放在被 Git 忽略的 `.local/` 下，使用单独的 `@name` 或 `@namespace`，并移除指向正式版的更新和下载地址。运行 `& $scriptCatCli install .\.local\demo.user.js`，将示例路径替换为开发副本的路径，再在浏览器中确认安装或更新。
+3. 用 `@Chrome` 在已配对的 Chrome 配置中打开或刷新目标页，检查实际运行效果。如果同一配置中同时安装了开发副本和订阅版，测试时只启用一个。Chrome DevTools MCP 默认使用独立浏览器配置，使用它验收前需要在该配置中安装并配对 ScriptCat。
+4. 发布时递增脚本版本。订阅成员或权限有变化时，再更新订阅清单并递增订阅版本。开发副本留在本机。
+
+[ScriptCat 外部接入命令和确认流程](https://docs.scriptcat.org/docs/use/external-access/)
+
 ## 来源
 
 - 高级倍速脚本来自 TheBszk，保留原有 AGPL 声明。[原作者发布页](https://greasyfork.org/scripts/479080)

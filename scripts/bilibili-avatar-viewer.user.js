@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Bilibili Avatar Viewer
 // @namespace    https://github.com/ghostroller
-// @version      1.1.5
+// @version      1.1.6
 // @description  Bilibili 用户主页头像原图预览；直播时头像下方提供进入直播间按钮；Ctrl/Cmd+单击或中键在新标签页打开原图；保留原生右键菜单。
 // @match        https://space.bilibili.com/*
+// @icon         https://www.bilibili.com/favicon.ico
 // @grant        none
 // @run-at       document-idle
 // @updateURL    https://raw.githubusercontent.com/ghostroller/browser-userscripts/main/scripts/bilibili-avatar-viewer.user.js

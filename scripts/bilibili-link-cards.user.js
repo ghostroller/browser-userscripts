@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         哔哩哔哩 - 链接预览卡片
 // @namespace    https://github.com/ghostroller/monkey-scripts-collection
-// @version      1.1.3
+// @version      1.1.4
 // @description  预览评论和视频简介中的视频、影视、图文、直播及用户主页链接，可切换常驻卡片、鼠标悬浮卡片或同时显示。
 // @match        https://www.bilibili.com/opus/*
 // @match        https://www.bilibili.com/video/*
 // @match        https://t.bilibili.com/*
 // @match        https://space.bilibili.com/*
+// @icon         https://www.bilibili.com/favicon.ico
 // @run-at       document-idle
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue

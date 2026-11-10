@@ -1,0 +1,19 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.local/
+*.pem
+*.key
+
+# Browser exports and local backups
+backups/
+*.bak
+*.backup
+
+# Optional development dependencies
+node_modules/
+
+# Operating system files
+.DS_Store
+Thumbs.db

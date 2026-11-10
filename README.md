@@ -2,15 +2,26 @@
 
 用于管理、版本控制与 ScriptCat 订阅更新的浏览器用户脚本合集。
 
-> 当前仅完成仓库初始化，尚未收录实际脚本。订阅清单为空，不会安装任何脚本。
-
 ## 使用
 
-- **整包订阅：** [安装或订阅全部脚本](https://raw.githubusercontent.com/ghostroller/browser-userscripts/main/subscriptions/all.user.sub.js)
+- **整包订阅：** [安装或订阅默认脚本](https://raw.githubusercontent.com/ghostroller/browser-userscripts/main/subscriptions/all.user.sub.js)
 - **查看订阅清单：** [all.user.sub.js](subscriptions/all.user.sub.js)
-- **单独安装：** 后续可打开 `scripts/` 中具体的 `.user.js` 文件，点击 GitHub 的 **Raw** 按钮进行安装。
+- **单独安装：** 在 GitHub 打开具体的 `.user.js` 文件，点击 **Raw**。禅道脚本请按下方说明在本机配置。
 
 先在浏览器安装 [ScriptCat](https://docs.scriptcat.org/docs/use/use/)，再打开上面的订阅直链并确认。如果只显示源码，可在 ScriptCat 的订阅管理中添加该链接。
+
+## 脚本
+
+| 文件 | 用途 | 安装方式 |
+| --- | --- | --- |
+| [B 站头像预览](scripts/bilibili-avatar-viewer.user.js) | 查看用户头像原图，用户直播时提供直播间入口 | 默认订阅或单独安装 |
+| [B 站评论属地](scripts/bilibili-comment-ip.user.js) | 在主评论和楼中楼显示 IP 属地 | 默认订阅或单独安装 |
+| [B 站高级倍速](scripts/bilibili-player-speed.user.js) | 自定义播放速度、记忆倍速和快捷键调速 | 默认订阅或单独安装 |
+| [B 站链接预览卡片](scripts/bilibili-link-cards.user.js) | 在常驻、悬停和同时显示三种模式之间切换 | 默认订阅或单独安装 |
+| [Codex Quota Compass](scripts/codex-quota-compass-shadow.user.js) | 展示用量明细和费用估算，沿用当前登录会话访问同源接口 | 单独安装 |
+| [禅道返回热键](scripts/zentao.user.js) | 用 Backspace 或 Esc 点击返回按钮 | 本地模板 |
+
+禅道脚本请复制到 ScriptCat 编辑器，将占位的 `@match` 改为实际的禅道地址，保留原有端口和路径范围。
 
 ## 目录
 
@@ -19,7 +30,8 @@ browser-userscripts/
 ├── README.md
 ├── .gitignore
 ├── scripts/
-│   └── README.md
+│   ├── README.md
+│   └── *.user.js
 └── subscriptions/
     └── all.user.sub.js
 ```
